@@ -1,0 +1,58 @@
+swagger: "2.0"
+info:
+  title: "This is my swagger swap apis"
+  description: "This is my Documentation"
+  version: "1.0"
+  contact:
+    email: "satesh7414@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://apache.org/"
+servers: 
+  - url: "http://localhost:5000"
+    description: "This is my server"
+paths:
+   /v1/auth/login:
+    post:
+      summary: "Login user"
+      description: "Logs in a user using provided credentials."
+      tags:
+        - "Authentication"
+      parameters:
+        - in: "body"
+          name: "credentials"
+          description: "User credentials"
+          required: true
+          schema:
+            type: "object"
+            properties:
+              email:
+                type: "string"
+              password:
+                type: "string"
+      responses:
+        200:
+          description: "Successful login"
+   /v1/auth/register:
+    post:
+      summary: "Register user"
+      description: "SignUp in a user using provided credentials."
+      tags:
+        - "Authentication"
+      parameters:
+        - in: "body"
+          name: "credentials"
+          description: "User credentials"
+          required: true
+          schema:
+            type: "object"
+            properties:
+              name:
+                type: "string"
+              email:
+                type: "string"
+              password:
+                type: "string"
+      responses:
+        200:
+          description: "Successful login"

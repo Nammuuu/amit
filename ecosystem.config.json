@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "Korakagaj API",
+      "script": "src/index.js",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "time": true,
+     "env_production": {
+       "NODE_ENV": "production"
+    },
+    "env_development": {
+       "NODE_ENV": "development"
+    },
+      "env_qa": {
+       "NODE_ENV": "qa"
+    }
+    }
+  ]
+}
